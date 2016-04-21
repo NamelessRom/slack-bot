@@ -1,0 +1,11 @@
+[Unit]
+Description=Awesome Nameless Slack bot
+
+[Service]
+ExecStart=/opt/slack/nameless/start.sh
+Restart=always
+RestartSec=3
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
