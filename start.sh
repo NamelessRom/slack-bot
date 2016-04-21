@@ -10,5 +10,11 @@
 # You need to have "nohup" installed
 #
 
+CONFIG_DIR=/opt/config/functions.bash
+if [ -e ${CONFIG_DIR} ]; then
+  echo "Sourcing ${CONFIG_DIR}"
+  source ${CONFIG_DIR}
+fi
+
 cd ${HUBOT_SLACK_WORKING_DIR}
 HUBOT_SLACK_TOKEN=${HUBOT_SLACK_TOKEN_NAMELESS} nohup ./bin/hubot -a slack
